@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Phonepad {
     public static void main(String[] args) {
-        pad("","12");
+        pad("","23");
 
         //ArrayList return Type
         ArrayList<String> ans=LetterCombination("","12");
@@ -21,7 +21,7 @@ public class Phonepad {
             return;
         }
         int digit=up.charAt(0)-'0';
-        for (int i = (digit-1)*3 /*Included in range */; i < digit*3/*Excluded from range */; i++) {
+        for (int i = (digit-2)*3 /*Included in range */; i < (digit-1)*3 /*Excluded from range */; i++) {
             char ch=(char)('a'+i);
             pad(p+ch, up.substring(1));
         }
